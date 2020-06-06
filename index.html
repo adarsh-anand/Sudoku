@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Sudoku with material design (pure js and css)</title>
+  <title>Sudoku</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
@@ -68,19 +68,6 @@
                         <span style="left:12px;">Sudoku Solver</span>
                     </div>
                 </button>
-                <button onclick="showDialogClick('about-dialog');" ripple-color="#003c8f" class="button nav-item vertical-adjust" >
-                    <div>
-                        <span class="material-icons">star</span>
-                        <span style="left:12px;">About</span>
-                    </div>
-                </button>
-                <div class="bar-footer">
-                    <ul>
-                        <a href="#" class="bar-footer-link">Site feedback</a>
-                        <a href="#" class="bar-footer-link">Privacy</a>
-                        <a href="#" class="bar-footer-link">Terms</a>
-                    </ul>
-                </div>
             </ul>
         </nav>
         <div class="nav-menu-blank" onclick="hideHamburgerClick()">
@@ -132,58 +119,6 @@
             <div class="dialog-footer">
                 <button onclick="startGameButtonClick();" ripple-color="#003c8f" class="button dialog-btn vertical-adjust" >OK</button>
                 <button onclick="hideDialogButtonClick('dialog');" ripple-color="#202020" class="button dialog-btn vertical-adjust" >Cancel</button>
-            </div>
-        </div>
-    </div>
-
-    <div id="about-dialog" class="dialog">
-
-        <div id="about-dialog-box" onblur="hideDialogButtonClick('about-dialog');" class="dialog-content about-dialog-content">
-            <div class="dialog-header">CodeTeam6</div>
-
-            <div class="dialog-body">
-                <p>about us</p>
-                <div class="card-group">
-                    <div class="card dialog-card">
-                        <div class="about-card-img">
-                            <img src="https://image.ibb.co/crYHen/a_abdallah.jpg" alt="" />
-                        </div>
-                        <div class="about-card-title">Ahmad Abdalla</div>
-                        <div class="about-card-content">Egypt</div>
-                        <div class="about-card-quote">My dream is to be the best developer in the world, and I'll work continuously to achieve that.</div>
-                    </div>
-                    <div class="card dialog-card">
-                        <div class="about-card-img">
-                            <img src="https://image.ibb.co/mKg3Kn/a_alrifai.jpg" alt="" />
-                        </div>
-                        <div class="about-card-title">Ayman Alrifai</div>
-                        <div class="about-card-content">Libya</div>
-                        <div class="about-card-quote">I love coding & design. I learn every day to build awesome stuff.</div>
-                    </div>
-                    <div class="card dialog-card">
-                        <div class="about-card-img">
-                            <img src="https://image.ibb.co/dYd5X7/m_diab.jpg" alt="" />
-                        </div>
-                        <div class="about-card-title">Mohammad Diab</div>
-                        <div class="about-card-content">Syria</div>
-                        <div class="about-card-quote">Silent but deadly.</div>
-                    </div>
-                    <div class="card dialog-card">
-                        <div class="about-card-img">
-                            <img src="https://image.ibb.co/g01g5S/r_bhere.jpg" alt="" />
-                        </div>
-                        <div class="about-card-title">Reham Bhere</div>
-                        <div class="about-card-content">Palestine</div>
-                        <div class="about-card-quote">I think outside the box, I love trying everything new.</div>
-                    </div>
-
-
-                </div>
-            </div>
-
-            <div class="dialog-footer">
-                <button onclick="hideDialogButtonClick('about-dialog');" ripple-color="#003c8f" class="button dialog-btn vertical-adjust"
-                    >OK</button>
             </div>
         </div>
     </div>
@@ -483,7 +418,7 @@
         </div>
 
         <div class="card status">
-            <div id="game-number">game #0</div>
+            <div id="game-number"></div>
             <ul class="game-status">
                 <li>
                     <div class="vertical-adjust">
@@ -494,14 +429,10 @@
                 </li>
 
                 <li>
-                    <div class="vertical-adjust">
-                        <span class="material-icons">network_check</span>
-                        <span id="game-difficulty-label">Game difficulty</span>
-                    </div>
-                    <div id="game-difficulty" class="timer">undefined</div>
+                    
                 </li>
                 <li>
-                    <div class="vertical-adjust">
+                        <div class="vertical-adjust">
                         <span class="material-icons">grid_on</span>
                         <span>Remaining numbers</span>
                     </div>
@@ -551,6 +482,14 @@
 
                     </div>
                 </li>
+                <li>
+                        <div class="vertical-adjust-custom">
+                        <button id="check-btn" onclick="checkButtonClick()" class="button bar-button more-button-custom">
+                                <span class="material-icons">done_all</span>
+                                <span>Check</span>
+                            </button>
+                        </div>
+                </li>
             </ul>
 
 
@@ -578,14 +517,7 @@
         </div>
     </div>
 
-    <div class="footer vertical-adjust">
-        <span class="material-icons">code</span>
-        <span>with</span>
-        <span class="material-icons">favorite</span>
-        <span>by Mohammad Diab from</span>
-        <a href="#" onclick="showDialogClick('about-dialog');" >#codeTeam6</a>
-        <span> . © 2018 all right reserved.</span>
-    </div>
+    
 </body>
 <!-- partial -->
   <script  src="./script.js"></script>
